@@ -92,6 +92,14 @@ public class CandidateController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
+    @PutMapping("/update/{id}")
+    public ResponseEntity<ResponseDTO> updateCandidateData(@PathVariable long id,
+                                                           @RequestBody CandidateDTO hiredCandidateDto) {
+        Candidate hiredCandidate = iCandidateService.updateCandidateId(id, hiredCandidateDto);
+        ResponseDTO response = new ResponseDTO("UPDATED CANDIDATE DATA SUCCESSFULLY !!!", hiredCandidate);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
     @GetMapping("/count/{status}")
     public ResponseEntity<ResponseDTO> getCount (@PathVariable String status){
         long hiredCandidate = iCandidateService.count1(status);

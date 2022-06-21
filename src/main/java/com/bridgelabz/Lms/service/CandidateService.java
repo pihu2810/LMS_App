@@ -124,7 +124,20 @@ public class CandidateService implements ICandidateService {
         }
         return hiredCandidate.get();
     }
-}
+
+    @Override
+    public Candidate updateCandidateId(long id, CandidateDTO hiredCandidateDto) {
+        Optional<Candidate> candidate=candidateRepository.findById(id);
+        if (candidate.isPresent()) {
+            Candidate newCandidate = new Candidate(id, hiredCandidateDto);
+            candidateRepository.save(newCandidate);
+            return newCandidate;
+        } else {
+            throw new CandidateException(HttpStatus.NOT_FOUND, "Candidate not found by this Id");
+        }
+    }
+    }
+
 
 
 

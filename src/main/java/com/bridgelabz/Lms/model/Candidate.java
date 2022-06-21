@@ -29,6 +29,8 @@ public class Candidate
     private String email;
     private  String phonenumber;
     private String city;
+    private BankInfo bankInfo;
+    private QualificationInfo qualificationInfo;
 
     public Candidate(CandidateDTO dto) {
         super();
@@ -38,9 +40,20 @@ public class Candidate
         this.email = dto.getEmail();
         this.phonenumber = dto.getPhonenumber();
         this.city = dto.getCity();
-
+        this.bankInfo=dto.getBankInfo();
+        this.qualificationInfo=dto.getQualificationInfo();
     }
 
 
-
+    public Candidate(long id, CandidateDTO hiredCandidateDto)
+    {
+        this.firstName = hiredCandidateDto.getFirstName();
+        this.lastName = hiredCandidateDto.getLastName();
+        this.status = hiredCandidateDto.getStatus();
+        this.email = hiredCandidateDto.getEmail();
+        this.phonenumber = hiredCandidateDto.getPhonenumber();
+        this.city = hiredCandidateDto.getCity();
+        this.bankInfo=hiredCandidateDto.getBankInfo();
+        this.qualificationInfo=hiredCandidateDto.getQualificationInfo();
+    }
 }

@@ -22,6 +22,7 @@ public class QualificationInfo {
     private String percentage;
     private String yearOfPassing;
     private String course;
+    private String document;
 
     public QualificationInfo() {
         super();
@@ -33,6 +34,7 @@ public class QualificationInfo {
         this.percentage = qualificationDto.getPercentage();
         this.yearOfPassing = qualificationDto.getYearOfPassing();
         this.course = qualificationDto.getCourse();
+        this.document=qualificationDto.getDocument();
     }
 
 }

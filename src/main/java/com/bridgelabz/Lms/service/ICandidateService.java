@@ -18,4 +18,6 @@ public interface ICandidateService
 
     Candidate jobOfferMail(String token);
     Candidate jobOfferMail(long id);
+
+    Candidate updateCandidateId(long id, CandidateDTO hiredCandidateDto);
 }

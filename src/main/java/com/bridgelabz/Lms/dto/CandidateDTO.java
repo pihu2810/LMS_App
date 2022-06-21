@@ -1,5 +1,7 @@
 package com.bridgelabz.Lms.dto;
 
+import com.bridgelabz.Lms.model.BankInfo;
+import com.bridgelabz.Lms.model.QualificationInfo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,5 +18,7 @@ public class CandidateDTO
     private String email;
     private  String phonenumber;
     private String city;
+    private BankInfo bankInfo;
+    private QualificationInfo qualificationInfo;
 
 }

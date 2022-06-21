@@ -44,7 +44,7 @@ public class CandidateConfig {
         DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();
         lineTokenizer.setDelimiter(",");
         lineTokenizer.setStrict(false);
-        lineTokenizer.setNames("id", "firstName", "lastName","status");
+        lineTokenizer.setNames("id","firstName","lastName","status","email","phonenumber","city","bankInfo","bankName","bankAccountNumber","ifscCode","branchName","qualificationInfo","collageName","degree","percentage","yearOfPassing","course","document");
 
         BeanWrapperFieldSetMapper<Candidate> fieldSetMapper = new BeanWrapperFieldSetMapper<>();
         fieldSetMapper.setTargetType(Candidate.class);

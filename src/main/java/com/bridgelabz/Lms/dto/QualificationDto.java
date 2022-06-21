@@ -21,5 +21,7 @@ public class QualificationDto {
     private String yearOfPassing;
     @NotNull
     private String course;
+    @NotNull
+    private String document;
 
 }
